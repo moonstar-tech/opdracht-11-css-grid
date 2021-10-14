@@ -1,0 +1,45 @@
+.container {
+  display:grid;
+  grid-gap: 3px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 40px 200px 40px;
+ 
+
+}
+.site-header {
+  background: blue;
+  height: 200px;
+}
+.site-main {
+  background:chartreuse;
+  height: 200px;
+}
+.widget-area {
+  background: blueviolet;
+  height: 200px;
+}
+.site-footer {
+  background:rgb(250, 2, 2);
+  height: 200px;
+}
+
+
+@media screen and (min-width: 700px) {
+  
+  .site-header {
+    grid-column: 1 / -1 ;
+  }
+  .site-main {
+    grid-column:  ;
+    
+  }
+  .widget-area {
+    grid-column: ;
+    
+  }
+  .site-footer {
+    grid-column: 1 / -1;
+  }
+  
+ 
+}
