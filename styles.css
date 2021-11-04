@@ -1,8 +1,8 @@
 .container {
   display:grid;
   grid-gap: 3px;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 40px 200px 40px;
+  grid-template-columns: 100px auto 100 px;
+  grid-template-rows: 50px 50px;
  
 
 }
@@ -27,18 +27,19 @@
 @media screen and (min-width: 700px) {
   
   .site-header {
-    grid-column: 1 / -1 ;
+    grid-column: 1 / span 1 ;
+    grid-row: 3 / auto;
   }
   .site-main {
-    grid-column:  ;
+    grid-column: 2 / fr 4 ;
     
   }
   .widget-area {
-    grid-column: ;
+    grid-column: 4 / fr 1 ;
     
   }
   .site-footer {
-    grid-column: 1 / -1;
+    grid-column: 2 / fr 4 ;
   }
   
  
