@@ -1,46 +1,52 @@
 .container {
   display:grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat (12, 1fr);
-  grid-template-rows: 50px, 100px, 50px;
- 
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 300px, 500px, 200px 200px;
+  height: 1000px; 
+  grid-template-areas: 
+  "header header"
+  "main main"
+  "widget-area widget area"
+  "footer footer"
+  
+
 
 }
-.site-header {
+site-header {
   background: blue;
-  height: 200px;
+  grid-area: header;
+  
 }
 .site-main {
   background:chartreuse;
-  height: 200px;
+  
+  
 }
 .widget-area {
   background: blueviolet;
-  height: 200px;
+  
+ 
 }
 .site-footer {
   background:rgb(250, 2, 2);
-  height: 200px;
 }
 
 
 @media screen and (min-width: 700px) {
+
   
   .site-header {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    
   
   }
   .site-main {
-    grid-column: 2 / 4 ;
     
   }
   .widget-area {
-    grid-column: 2 / 4 ;
     
   }
   .site-footer {
-    grid-column: 2 / 4 ;
+    
   }
   
  
