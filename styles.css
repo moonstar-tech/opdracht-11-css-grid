@@ -6,48 +6,59 @@
   grid-template-areas: 
   "header header"
   "main main"
-  "widget-area widget area"
+  "widget-area widget-area"
   "footer footer"
   
 
 
 }
-site-header {
+.site-header {
   background: blue;
   grid-area: header;
   
 }
 .site-main {
   background:chartreuse;
+  grid-area: main;
   
   
 }
 .widget-area {
   background: blueviolet;
-  
+  grid-area: widget-area;
  
 }
 .site-footer {
   background:rgb(250, 2, 2);
+  grid-area: footer;
+
 }
 
 
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
 
+  .container {
+    grid-template-rows: 300px, 500px, 200px;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    "header main main"
+    "header widget-area widget-area"
+    "header footer footer"
+    
+    
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .container {
+    grid-template-rows: 200px, 800px, 200px;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    "header main widget-area"
+    "header main widget-area"
+    "header footer widget-area"
+    
+  }
   
-  .site-header {
-    
-  
-  }
-  .site-main {
-    
-  }
-  .widget-area {
-    
-  }
-  .site-footer {
-    
-  }
-  
- 
 }
